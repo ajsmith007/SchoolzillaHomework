@@ -1,4 +1,13 @@
 <?php
+/*
+	Utilities for general PHP programming
+*/
+
+function printVar($var) {
+    echo '<pre>';
+    var_dump($var); 
+    echo '</pre>';
+}
 
 function readCSV($csvFile){
 	$file_handle = fopen($csvFile, 'r');
@@ -9,13 +18,5 @@ function readCSV($csvFile){
 	return $line_of_text;
 }
 
-
-// Set path to CSV file
-$csvFile = 'input.csv';
-
-$csv = readCSV($csvFile);
-echo '<pre>';
-print_r($csv);
-echo '</pre>';
 
 ?>
