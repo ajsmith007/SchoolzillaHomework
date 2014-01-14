@@ -1,0 +1,161 @@
+.hero-unit h1 { letter-spacing: -.075em; }
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Keep navbar above content */
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+
+.navbar-fixed-top { 
+	background-color:#FFF;
+}
+
+.navbar-wrapper {
+	position: relative;
+	z-index: 15;
+}
+
+.navbar-default .navbar-brand {
+	padding: 5px 5px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #AAA;
+}
+
+.navbar-default .navbar-nav > .open > a {
+	color: #AAA;
+}
+
+.navbar-nav > li > .dropdown-menu {
+	background:#FFF;
+	opacity:1.0;
+}
+
+.dropdown-header {
+	color: #EEE;
+}
+
+.dropdown-menu li a {
+	color: #AAA;
+}
+	
+.dropdown-menu li a:hover {
+	color: #111;
+	background: transparent;
+}
+	
+.dropdown-menu > .active > .a {
+	background-color: transparent;
+	}
+	
+.navbar ul li:first-child a:after{
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #FFF;
+}
+
+.navbar ul li:first-child a:hover:after{
+    border-bottom-color: #AAA; 
+}
+
+.icon-picker {
+    border: 0px solid #000000;
+    display: inline-block;
+}
+
+.icon-picker-right {
+    border: 0px solid #000000;
+    display: inline-block;
+    float: left;
+}
+
+
+/* CUSTOMIZE THE FEATURETTE
+-------------------------------------------------- */
+/* Round the image corners */
+.featurette .img-responsive {
+	border-radius: 10px
+}
+
+
+/* CUSTOMIZE THE FOOTER
+-------------------------------------------------- */
+.footer-buttons {
+   margin: 0 auto !important;
+   float: none !important;
+}
+
+.center {
+   margin: 0 auto !important;
+   float: none !important;
+}
+
+.center-img {
+   margin: 0 auto;
+}
+
+#footer-text {
+	font-size: 8pt;
+}
+
+a[href^="mailto:"]
+{ 
+  color: gray;
+  font-size: 8pt;
+}
+
+#social-buttons div {
+    float:center !important;
+    display:inline-block !important;
+    margin:0 10px 0 10px !important;
+    border:none;
+    overflow:hidden;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+/* Phone Size Screens */
+@media (min-width: 768px) {
+
+}
+
+@media (max-width: 768px) {
+	/* Switch brand and menu on small screens  */
+	.navbar-toggle {
+		float:left;
+		margin: 8px 8px 0 10px;
+	}
+	
+	.navbar-default .navbar-toggle {
+		border-color: #BBB;
+	}
+	
+	.navbar-brand { 
+		float:right;
+	}
+}
+
+
+/* Tablet Size Screens*/
+@media (min-width: 992px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
