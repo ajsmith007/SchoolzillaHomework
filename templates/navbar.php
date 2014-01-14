@@ -17,7 +17,7 @@ $current_file = end($current_file);
 			<!-- Everything you want hidden at 992px or less, place within here -->
 			<div class="navbar-collapse collapse">
 			  <ul class="nav navbar-nav">
-			  	<?php $active = ($current_file == 'index.php' || '/') ? "active" : "nonactive"?>
+			  	<?php $active = ($current_file == 'index.php') ? "active" : "nonactive"?>
 				<li class=<?php echo $active ?>><a href="index.php">Homework <i class="fa fa-home"></i></a></li>
 				<?php $active = ($current_file == 'demo.php') ? "active" : "nonactive"?>
 				<li class=<?php echo $active ?>><a href="demo.php">Demo</a></li>

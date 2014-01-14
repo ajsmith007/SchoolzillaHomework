@@ -32,7 +32,7 @@ error_reporting(E_ERROR | E_PARSE);
 	 	if ($_FILES["file"]["error"] > 0){
 	    	echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
 	    } else {
-		    if (1) {
+		    if (DEBUG == 1) {
 			    echo "Upload: " . $_FILES["file"]["name"] . "<br>";
 			    echo "Type: " . $_FILES["file"]["type"] . "<br>";
 			    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
@@ -77,10 +77,10 @@ error_reporting(E_ERROR | E_PARSE);
 				echo '</table>';
 				break;
 			case "txt":
-				echo $extension . " format not supported at this time... please check back later.";
+				echo "<p>" . $extension . " format not supported at this time... please check back later.";
 				break;
 			case "xls":
-				echo $extension . " format not supported at this time... please check back later.";
+				echo "<p>" . $extension . " format not supported at this time... please check back later.";
 				break;
 			case "xlsx":
 				$xlsx = new SimpleXLSX("upload/" . $_FILES["file"]["name"]);

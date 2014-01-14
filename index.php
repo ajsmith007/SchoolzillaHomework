@@ -97,24 +97,15 @@ include 'templates/navbar.php' ;
 			<hr class="col-lg-12 col-md-12 col-xs-12 featurette-divider">
 			
 			<div class="row featurette">
-			<h4>Homework Questions</h4>
-			<h5>Question 1: How would you design a solution to this problem?</h5>
-			<h5>Question 2: How would you verify that your solution continues to perform well?</h5>
+				<h4>Homework Questions</h4>
+				<h5>Question 1: How would you design a solution to this problem?</h5>
+				<h5>Question 2: How would you verify that your solution continues to perform well?</h5>
 			</div>
 
 			<hr class="col-lg-12 col-md-12 col-xs-12 featurette-divider">
 			
 			<div class="row featurette">
-			<h4>Upload Spreadsheet</h4>
-				<p>
-					This demo will allow you to select a file in a standard spreadsheet format (*.csv or *.xlsx) and upload it for processing. 
-				</p>
-				<form action="uploadSpreadsheet.php" method="post" enctype="multipart/form-data">
-					<label for="file">Spreadsheet Filename:</label>
-					<input type="file" name="file" id="file"><br>
-					<input type="submit" name="submit" value="Submit">
-				</form>
-			<p>
+				<h4>Continue on to the <a href="demo.php">Demo</a>.</h4>
 			</div>
 
     	</div> <!-- ./col-lg-10 col-md-10 col-xs-12 -->

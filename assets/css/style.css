@@ -8,6 +8,11 @@ body {
 	padding-bottom: 40px;
 }
 
+a:link {color:#439701;}      	/* unvisited link */
+a:visited {color:#4da901;}  	/* visited link */
+a:hover {color:#AAAAAA;}  		/* mouse over link */
+a:active {color:#99939d;}  		/* selected link */
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
