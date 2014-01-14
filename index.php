@@ -34,7 +34,6 @@ include 'templates/navbar.php' ;
 					
 					For example, imagine the only version of data a customer has for a recent test is in a spreadsheet in the following format.
 				</p>
-				<div class="table-responsive">
 				<table class="table table-bordered table-condensed table-hover" width="600">
 					<thead>
 					<tr>
@@ -61,7 +60,6 @@ include 'templates/navbar.php' ;
 					</tr>
 					</tbody>
 				</table>
-				</div>
 				<p>
 					As you can see, the spreadsheet has missing values in some important columns, a color is in a column that is supposed to have the test score, etc. And it turns out that Student Number 8675309 isn’t a real student number.
 					We also need to reshape this data from it’s current format to prepare it for loading into the data warehouse. The table that you would be loading has similar purpose but a different structure:
@@ -99,6 +97,18 @@ include 'templates/navbar.php' ;
 			<hr class="col-lg-12 col-md-12 col-xs-12 featurette-divider">
 			
 			<div class="row featurette">
+			<h4>Homework Questions</h4>
+			<h5>Question 1: How would you design a solution to this problem?</h5>
+			<h5>Question 2: How would you verify that your solution continues to perform well?</h5>
+			</div>
+
+			<hr class="col-lg-12 col-md-12 col-xs-12 featurette-divider">
+			
+			<div class="row featurette">
+			<h4>Demo</h4>
+				<p>
+					This demonstration will allow you to select a file in a standard spreadsheet format (*.csv or *.xlsx) and uploaded it for processing. 
+				</p>
 				<form action="uploadSpreadsheet.php" method="post" enctype="multipart/form-data">
 					<label for="file">Filename:</label>
 					<input type="file" name="file" id="file"><br>
