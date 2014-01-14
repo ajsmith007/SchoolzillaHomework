@@ -34,7 +34,7 @@ include 'templates/navbar.php' ;
 					
 					For example, imagine the only version of data a customer has for a recent test is in a spreadsheet in the following format.
 				</p>
-				<table class="table table-bordered table-condensed table-hover" width="600">
+				<table class="table table-bordered table-condensed table-hover">
 					<thead>
 					<tr>
 						<th>Student Number</th>
@@ -63,7 +63,7 @@ include 'templates/navbar.php' ;
 				<p>
 					As you can see, the spreadsheet has missing values in some important columns, a color is in a column that is supposed to have the test score, etc. And it turns out that Student Number 8675309 isn’t a real student number.
 					We also need to reshape this data from it’s current format to prepare it for loading into the data warehouse. The table that you would be loading has similar purpose but a different structure:
-					<table class="table table-bordered table-condensed table-hover" width="600">
+					<table class="table table-bordered table-condensed table-hover">
 					<thead>
 					<tr>
 						<th>student_id</th>
@@ -105,12 +105,12 @@ include 'templates/navbar.php' ;
 			<hr class="col-lg-12 col-md-12 col-xs-12 featurette-divider">
 			
 			<div class="row featurette">
-			<h4>Demo</h4>
+			<h4>Upload Spreadsheet</h4>
 				<p>
-					This demonstration will allow you to select a file in a standard spreadsheet format (*.csv or *.xlsx) and uploaded it for processing. 
+					This demo will allow you to select a file in a standard spreadsheet format (*.csv or *.xlsx) and upload it for processing. 
 				</p>
 				<form action="uploadSpreadsheet.php" method="post" enctype="multipart/form-data">
-					<label for="file">Filename:</label>
+					<label for="file">Spreadsheet Filename:</label>
 					<input type="file" name="file" id="file"><br>
 					<input type="submit" name="submit" value="Submit">
 				</form>
