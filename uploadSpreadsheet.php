@@ -14,6 +14,7 @@ include 'utils.class.php';
 include 'simplexlsx.class.php';
 error_reporting(E_ERROR | E_PARSE);
 
+	define('DEBUG', false);
 	$allowedExts = array("csv", "txt", "xls", "xlsx");
 	$filename = explode(".", $_FILES["file"]["name"]);
 	$extension = end($filename);
@@ -32,18 +33,18 @@ error_reporting(E_ERROR | E_PARSE);
 	 	if ($_FILES["file"]["error"] > 0){
 	    	echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
 	    } else {
-		    if (DEBUG == 1) {
+		    if (DEBUG === true) {
 			    echo "Upload: " . $_FILES["file"]["name"] . "<br>";
 			    echo "Type: " . $_FILES["file"]["type"] . "<br>";
 			    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
 			    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
 			}	
 	    	if (file_exists("upload/" . $_FILES["file"]["name"])){
-	      		echo $_FILES["file"]["name"] . " already exists. ";
+	      		echo $_FILES["file"]["name"] . " has already been uploaded. <br>";
 	      	} else {
 	      		move_uploaded_file($_FILES["file"]["tmp_name"],
 	      		"upload/" . $_FILES["file"]["name"]);
-	      		echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+	      		echo "Stored in: " . "upload/" . $_FILES["file"]["name"] . "<br>";
 	      	}
 	      	switch ($extension) {
 	    	case "csv":
@@ -60,7 +61,7 @@ error_reporting(E_ERROR | E_PARSE);
 					if ($c == 0){
 						echo '<tr>';
 						for( $r=0; $r < $num_rows; $r++ ) {
-							echo ( (!empty($r[$i])) ? '<th>'. $r[$i] : '<th class="warning">'.'&nbsp;' ).'</th>';
+							echo ( (!empty($csv[$c][$r])) ? '<th>'. $csv[$c][$r] : '<th class="warning">'.'&nbsp;' ).'</th>';
 						}
 						echo '</tr>';
 						echo '</thead>';
@@ -68,7 +69,7 @@ error_reporting(E_ERROR | E_PARSE);
 					} else {
 						echo '<tr>';
 						for( $r=0; $r < $num_rows; $r++ ) {
-							echo ( (!empty($r[$i])) ? '<td>'. $r[$i] : '<td class="warning">'.'&nbsp;' ).'</td>';
+							echo ( (!empty($csv[$c][$r])) ? '<td>'. $csv[$c][$r] : '<td class="warning">'.'&nbsp;' ).'</td>';
 						}
 						echo '</tr>';
 					} // end if/else
@@ -77,10 +78,10 @@ error_reporting(E_ERROR | E_PARSE);
 				echo '</table>';
 				break;
 			case "txt":
-				echo "<p>" . $extension . " format not supported at this time... please check back later.";
+				echo "<p>" . $extension . " format not supported at this time... please check back later. </p>";
 				break;
 			case "xls":
-				echo "<p>" . $extension . " format not supported at this time... please check back later.";
+				echo "<p>" . $extension . " format not supported at this time... please check back later. </p>";
 				break;
 			case "xlsx":
 				$xlsx = new SimpleXLSX("upload/" . $_FILES["file"]["name"]);
