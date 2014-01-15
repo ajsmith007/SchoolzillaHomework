@@ -7,7 +7,7 @@
 			<br>Copyright &copy; 2014 Schoolzilla and Drew Smith 
 			<br>All rights reserved.
 			<br><a href="mailto:ajsmith007@gmail.com?Subject=Schoolzilla%20Homework" target="_top">Contact Me</a>
-			<br>Schoolzilla Homework Version: 0.7.01.12
+			<br>Schoolzilla Homework Version: 0.7.01.14 - demo
 		</div>
 	</footer>
 </body>

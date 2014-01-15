@@ -8,7 +8,7 @@
  *
  * @author     Drew Smith <ajsmith007gmail.com>
  * @copyright  2014 Drew Smith
- * @version    0.7.01.12
+ * @version    0.7.01.14 - demo
 **/
 
 include 'templates/header.php' ;
@@ -21,7 +21,7 @@ include 'templates/navbar.php' ;
    		<!-- START THE FEATURETTES -->
 		<div class="col-lg-10 col-md-10 col-xs-12">			
 			<div class="row featurette">
-	    		<p>Sunday, January 12, 2014</p>
+	    		<p>Sunday, January 14, 2014</p>
 	    		<h2 class="featurette-heading">Welcome to Drew's Schoolzilla Homework</h2>
 	    		<h4 class="text-muted">Demonstrating a Data Transform Scenario</h4>
 				<p>
@@ -104,9 +104,7 @@ include 'templates/navbar.php' ;
 
 			<hr class="col-lg-12 col-md-12 col-xs-12 featurette-divider">
 			
-			<div class="row featurette">
-				<h4>Continue on to the <a href="demo.php">Demo</a>.</h4>
-			</div>
+			<h4>Continue on to the <a href="demo.php">Demo</a>.</h4>
 
     	</div> <!-- ./col-lg-10 col-md-10 col-xs-12 -->
 		<!-- /END THE FEATURETTES -->
